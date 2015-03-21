@@ -31,13 +31,18 @@ run_analysis <- function() {
 
   # 3. Use descriptive activity names to name the activities in the data set
   activity_ids <- rbind(ytrain, ytest)
-data1 <- data
-  data1$activity_ids <- activity_ids[1,]
+  data$activity_ids <- activity_ids[1,]
   feature_labels <- c(feature_labels, "activity_ids")
-
+  
   # 4. Appropriately labels the data set with descriptive variable names.
-#  rawnames <- features[colindices, 2]
-  names(data1) <- feature_labels
+  feature_labels <- gsub("-",       "_", feature_labels)
+  feature_labels <- gsub(",",       "_", feature_labels)
+  #  feature_labels <- gsub("\\(\\)$", "",  feature_labels)
+  feature_labels <- gsub("\\(",     "", feature_labels)
+  feature_labels <- gsub("\\)",     "",  feature_labels)
+  feature_labels <- gsub("__",      "_", feature_labels)
+  
+  names(data) <- feature_labels
 
   # 5. From the data set in step 4, creates a second, independent tidy data set
   #    with the average of each variable for each activity and each subject.
