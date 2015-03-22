@@ -1,50 +1,56 @@
 run_analysis Code Book
 ======================
 
-Note: Sections of this code book are taken from *features_info.txt*.  Please also refer to it
+Note: Sections of this code book are taken from *Human Activity Recognition Using Smartphones Dataset* and its associated files.  For an overview of that project, please refer to its files, in particular:
+- *README.md*
+- *features_info.txt*
 
+*tidydata.txt* Observations
+---------------------------
 
-Feature Selection 
-=================
+In the *run_analysis()* function's *tidydata.txt* output, each observation consists is on its own row and has these
+two unqiue values:
+- activity_names: Directly obtained from *activity_labels.txt*
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+  - LAYING
+  - SITTING
+  - STANDING
+  - WALKING
+  - WALKING_DOWNSTAIRS
+  - WALKING_UPSTAIRS
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+*tidydata.txt* Variables
+------------------------
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- tBodyAcc_XYZ
+- tGravityAcc_XYZ
+- tBodyAccJerk_XYZ
+- tBodyGyro_XYZ
+- tBodyGyroJerk_XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc_XYZ
+- fBodyAccJerk_XYZ
+- fBodyGyro_XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-*mean*: Mean value
-*std*: Standard deviation
+- mean: Mean value
+- std: Standard deviation
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
-*gravityMean*
-*tBodyAccMean*
-*tBodyAccJerkMean*
-*tBodyGyroMean*
-*tBodyGyroJerkMean*
+- gravityMean
+- tBodyAccMean
+- tBodyAccJerkMean
+- tBodyGyroMean
+- tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is available in 'features.txt'
+The complete list of variables of each feature vector is available in *tidynames.txt*
