@@ -23,14 +23,19 @@ The function takes no arguments but requires the files it needs can be read from
 
 Likewise, its *tidydata.txt* file will be written to the working directory.
 
-The *run_analysis()* function does the following (though not necessariy in order internally):
+The *run_analysis()* function does the following (though not necessariy in this order internally):
 
 1. Merges the training and the test sets from the working directory to create
    one data set.
 2. Extracts only the measurements on the mean and standard deviation for each
    measurement. 
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names. 
+3. Uses descriptive activity names to name the activities in the data set. The names are directly taken from *activity_labels.txt*.
+4. Appropriately labels the data set with descriptive variable names. The names originate from *features.txt* with the following character replacements, creating legal programming identifiers.
+  1. dash to underscore
+  2. comma to underscore
+  3. lparen removed
+  4. rparen removed
+  5. multi-underscores to single underscore
 5. From the data set in step 4, creates a second, independent tidy data set in
    "tidydata.txt" in the working directory with the average of each variable
    for each activity and each subject.
