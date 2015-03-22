@@ -12,14 +12,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 The run_analysis.R's *run_analysis()* function prepares tidy data that can be used for later analysis.
 The function takes no arguments but requires the files it needs can be read from the working directory:
 
-- activity_labels.txt
-- features.txt
-- subject_test.txt
-- subject_train.txt
-- X_test.txt
-- X_train.txt
-- y_test.txt
-- y_train.txt
+- *features.txt*: List of all features.
+- *activity_labels.txt*: Links the class labels with their activity name.
+- *subject_train.txt*: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- *subject_test.txt*: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- *X_train.txt*: Training set.
+- *y_train.txt*: Training labels.
+- *X_test.txt*: Test set.
+- *y_test.txt*: Test labels.
 
 Likewise, its *tidydata.txt* file will be written to the working directory.
 
