@@ -42,9 +42,9 @@ run_analysis <- function() {
   # 2. Appropriately label the data set with descriptive variable names.
   vFeatureLabels <- gsub("-",   "_", vFeatureLabels) # dash to underscore
   vFeatureLabels <- gsub(",",   "_", vFeatureLabels) # comma to underscore
-  vFeatureLabels <- gsub("\\(", "",  vFeatureLabels) # lparen to underscore
-  vFeatureLabels <- gsub("\\)", "",  vFeatureLabels) # rparen to underscore
-  vFeatureLabels <- gsub("__",  "_", vFeatureLabels) # mult-underscores to underscore
+  vFeatureLabels <- gsub("\\(", "",  vFeatureLabels) # lparen removed
+  vFeatureLabels <- gsub("\\)", "",  vFeatureLabels) # rparen removed
+  vFeatureLabels <- gsub("__",  "_", vFeatureLabels) # multi-underscores to single underscore
   names(df) <- vFeatureLabels
 
   # 3. Extract only the measurements on the mean and standard deviation for each
