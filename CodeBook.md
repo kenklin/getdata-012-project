@@ -26,7 +26,7 @@ two unqiue values:
 *tidydata.txt* Description Variables
 ------------------------------------
 
-While the original data set has 561 columns, whose labels are in *features.txt*, the *run_analysis()* function calculates the **mean** of those (original) columns that measure a *mean()* or *std()*.
+While the original data set has 561 columns, whose labels are in *features.txt*, the *run_analysis()* function calculates the **mean** of those (original) columns that measure a **mean()** or **std()**.
 
 - tBodyAcc_XYZ: [Number] **mean** of all tBodyAcc-XYZ for each activity_names/subject_ids observations
 - tGravityAcc_XYZ: [Number] **mean** of all tGravityAcc-XYZ for each activity_names/subject_ids observations
@@ -59,4 +59,4 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 - tBodyGyroMean: [Number] **mean** of all tBodyGyroMean for each activity_names/subject_ids observations
 - tBodyGyroJerkMean: [Number] **mean** of all tBodyGyroJerkMean for each activity_names/subject_ids observations
 
-The complete list of variables of each feature vector is available in *tidynames.txt*
+The complete list of variables for *tidydata.txt* is available in *tidynames.txt*
